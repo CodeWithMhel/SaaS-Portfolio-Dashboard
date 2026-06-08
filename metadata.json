@@ -1,0 +1,6 @@
+{
+  "name": "SaaS Portfolio Dashboard",
+  "description": "A premium, dark-and-light-themed SaaS dashboard-style portfolio website for an AI Creator, Developer, and Entrepreneur.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

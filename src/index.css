@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;550;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Overriding standard Tailwind Zinc colors to match raw hexes from Sophisticated Dark spec */
+  --color-zinc-950: #0A0A0B;
+  --color-zinc-900: #0E0E10;
+  --color-zinc-850: #111112;
+  --color-zinc-800: rgba(255, 255, 255, 0.08);
+}
+
+/* Base Body Styles for Sophisticated Dark Theme */
+.dark body {
+  background-color: #0A0A0B !important;
+  color: #f4f4f5 !important;
+}
+
+/* Global Section and Card overrides when Dark Mode is Active */
+.dark section,
+.dark .rounded-3xl.border,
+.dark .rounded-2xl.border,
+.dark .rounded-xl.border {
+  background-color: #111112 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Ensure no double-bordered visual noise in lists */
+.dark .border-b,
+.dark .border-t,
+.dark .border-l,
+.dark .border-r {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Custom specific widgets matching Sophisticated Dark exactly */
+.dark #saas-sidebar {
+  background-color: #0E0E10 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark #saas-sidebar div {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark #top-sticky-navbar {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark #top-sticky-navbar.bg-zinc-950\/80 {
+  background-color: rgba(10, 10, 11, 0.85) !important;
+}
+
+.dark #main-applet-footer {
+  background-color: #0E0E10 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark #dashboard-hero {
+  background: linear-gradient(135deg, #1A1A1D 0%, #0A0A0B 100%) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* High contrast inputs and textareas for premium developer settings and contact form */
+.dark input, 
+.dark textarea,
+.dark select {
+  background-color: #0A0A0B !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+}
+
+.dark input::placeholder, 
+.dark textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* Highlight elements */
+.dark .text-zinc-900 {
+  color: #ffffff !important;
+}
+
+.dark .text-zinc-800 {
+  color: #e4e4e7 !important;
+}
+
+.dark .text-zinc-650 {
+  color: #a1a1aa !important;
+}
+
+.dark .text-zinc-550 {
+  color: #a1a1aa !important;
+}
+
+.dark .text-zinc-500 {
+  color: #71717a !important;
+}
+
+/* Glassmorphism scrollbar styling rules */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Animations helpers */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-spin-slow {
+  animation: spin 10s linear infinite;
+}
+
+/* ---------------- PREMIUM PRINT STYLING RULES ---------------- */
+@media print {
+  html, body {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #18181b !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Force light colors on print */
+  * {
+    color: #18181b !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    border-color: #e4e4e7 !important;
+  }
+
+  /* Hide interactive, dynamic, or non-content components */
+  #saas-sidebar,
+  #top-sticky-navbar,
+  #global-reading-progress,
+  #mobile-sidebar-toggle-btn,
+  #theme-toggle-btn,
+  #close-sidebar-btn,
+  form,
+  button,
+  kbd,
+  footer,
+  .accent-palette,
+  [role="dialog"],
+  .fixed,
+  .shadow-md,
+  .shadow-2xl,
+  .animate-pulse,
+  .animate-ping {
+    display: none !important;
+  }
+
+  /* Reset layout margins and paddings */
+  div.md\:pl-64 {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  main {
+    padding: 1.5cm !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Grid adaptations to layout cleanly on physical sheets */
+  .grid {
+    display: block !important;
+  }
+
+  /* Beautiful card boundaries */
+  section {
+    display: block !important;
+    page-break-inside: avoid !important;
+    border: 1px solid #e4e4e7 !important;
+    border-radius: 12px !important;
+    background: #ffffff !important;
+    padding: 20px !important;
+    margin-bottom: 25px !important;
+    box-shadow: none !important;
+  }
+
+  /* Sections title sizing */
+  h2, h3 {
+    page-break-after: avoid !important;
+  }
+
+  /* Profile avatar resizing on print */
+  img {
+    max-width: 120px !important;
+    height: auto !important;
+    border-radius: 6px !important;
+  }
+
+  /* Timeline formatting */
+  .timeline-event, .project-card {
+    page-break-inside: avoid !important;
+    margin-bottom: 12px !important;
+    border: 1px solid #f4f4f5 !important;
+  }
+}
+
