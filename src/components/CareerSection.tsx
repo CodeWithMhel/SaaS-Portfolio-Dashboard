@@ -193,7 +193,7 @@ export default function CareerSection({ onOpenAssetModal }: CareerSectionProps) 
                   value={formState.name}
                   onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                   required
-                  placeholder="Kaelen Rivera" 
+                  placeholder="Romel B. Montiagodo" 
                   className="w-full px-3 py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-750 bg-zinc-50/50 dark:bg-zinc-950 text-zinc-805 dark:text-zinc-200 focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
               </div>
@@ -207,7 +207,7 @@ export default function CareerSection({ onOpenAssetModal }: CareerSectionProps) 
                   value={formState.email}
                   onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                   required
-                  placeholder="kaelen@agency.com" 
+                  placeholder="CodeWithMhel@gmail.com" 
                   className="w-full px-3 py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-750 bg-zinc-50/50 dark:bg-zinc-950 text-zinc-805 dark:text-zinc-200 focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
               </div>

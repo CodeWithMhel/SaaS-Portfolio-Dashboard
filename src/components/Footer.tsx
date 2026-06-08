@@ -157,11 +157,11 @@ export default function Footer({ onScrollToElement }: FooterProps) {
           <div className="text-xs space-y-2 text-zinc-505 dark:text-zinc-450 leading-relaxed font-sans">
             <div className="flex items-center gap-2">
               <MapPin size={13} className="text-blue-500 shrink-0" />
-              <span>San Francisco Bay Area, California</span>
+              <span>Brgy San Jose, Antipolo City. Rizal. Philippines</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail size={13} className="text-blue-500 shrink-0" />
-              <span>leo.sterling@agency.ai</span>
+              <span>romelmontiagodo2@gmail.com</span>
             </div>
           </div>
           <button 

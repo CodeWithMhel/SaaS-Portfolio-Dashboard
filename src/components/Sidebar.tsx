@@ -29,6 +29,21 @@ import {
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data';
 
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      [elemName: string]: any;
+    }
+  }
+}
+
+declare module 'react/jsx-runtime' {
+  export function jsx(type: any, props?: any, key?: any): any;
+  export function jsxs(type: any, props?: any, key?: any): any;
+  export function jsxDEV(type: any, props?: any, key?: any): any;
+  export const Fragment: any;
+}
+
 interface SidebarProps {
   onSelectTab: (tab: 'dashboard' | 'settings') => void;
   activeTab: 'dashboard' | 'settings';
@@ -79,7 +94,7 @@ export default function Sidebar({
             </div>
             <div>
               <span className="font-sans font-bold text-sm tracking-tight text-zinc-900 dark:text-zinc-100 block">
-                STERLING_HQ
+                CODE_WITH_MHEL
               </span>
               <span className="font-mono text-[10px] text-zinc-500 block uppercase tracking-widest">
                 SYS v4.14-ACTIVE

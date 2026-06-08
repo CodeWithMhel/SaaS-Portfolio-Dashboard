@@ -4,7 +4,7 @@
  */
 
 import { Project, KPI, TimelineEvent, Experience, Skill, Certification } from './types';
-import avatarUrl from './assets/images/profile_avatar_1780900950745.png';
+import avatarUrl from './assets/images/Profile.png';
 
 export const PERSONAL_INFO = {
   name: "Romel B. Montiagodo",
