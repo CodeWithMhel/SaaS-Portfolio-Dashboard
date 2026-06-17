@@ -32,7 +32,7 @@ export default function Footer({ onScrollToElement }: FooterProps) {
               S
             </div>
             <span className="font-sans font-bold text-sm tracking-tight text-zinc-900 dark:text-zinc-100">
-              STERLING_WORKSPACE
+              CODE_WITH_MHEL_WORKSPACE
             </span>
           </div>
           <p className="text-xs text-zinc-505 dark:text-zinc-450 leading-relaxed font-sans">
