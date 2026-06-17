@@ -155,7 +155,7 @@ export default function Sidebar({
             {socialOpen && (
               <div className="pl-6 space-y-0.5 animate-fadeIn">
                 <a 
-                  href={PERSONAL_INFO.socials.youtube} 
+                  href="https://www.youtube.com/@DevLogix-13" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-3 py-2 text-[11px] text-zinc-500 dark:text-zinc-400 hover:text-red-500 dark:hover:text-red-400 font-sans transition-colors rounded-md"
@@ -163,7 +163,7 @@ export default function Sidebar({
                   <Youtube size={13} /> YouTube Channel
                 </a>
                 <a 
-                  href={PERSONAL_INFO.socials.linkedin} 
+                  href="https://www.linkedin.com/in/romel-montiagodo-533598318/"
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-3 py-2 text-[11px] text-zinc-500 dark:text-zinc-400 hover:text-blue-500 dark:hover:text-blue-400 font-sans transition-colors rounded-md"
@@ -171,7 +171,7 @@ export default function Sidebar({
                   <Linkedin size={13} /> LinkedIn Network
                 </a>
                 <a 
-                  href={PERSONAL_INFO.socials.facebook} 
+                  href="https://www.facebook.com/kuyamhel013"
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-3 py-2 text-[11px] text-zinc-500 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-450 font-sans transition-colors rounded-md"
@@ -187,7 +187,7 @@ export default function Sidebar({
                   <Instagram size={13} /> Instagram Feed
                 </a>
                 <a 
-                  href={PERSONAL_INFO.socials.tiktok} 
+                  href="https://www.tiktok.com/@ytdevlogix"
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-3 py-2 text-[11px] text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white font-sans transition-colors rounded-md"
